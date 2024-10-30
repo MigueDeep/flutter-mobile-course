@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "703774297124",
+    "project_id": "restaurantes-055",
+    "storage_bucket": "restaurantes-055.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703774297124:android:51b44f64022e7962da9cb1",
+        "android_client_info": {
+          "package_name": "com.example.hello_world_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOxkMtOfX0MRjZ_XKTC-h1BZo8pK8Rk8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

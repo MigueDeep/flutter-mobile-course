@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -16,9 +17,49 @@ class Profile extends StatelessWidget {
         },
         child: const Icon(Icons.chevron_right),
       ),
-      body: const Center(
-        child: Text("Perfil"),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            const Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.deepPurpleAccent,
+                  foregroundColor: Colors.white,
+                  radius: 24.0,
+                  child: Text("MD"),
+                ),
+                SizedBox(width: 8.0),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "email@gmail.com",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16.0,
+                      ),
+                    ),
+                    Text(
+                      "Cristopher Soto",
+                      style: TextStyle(fontSize: 14.0),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            const Spacer(),
+            ElevatedButton(
+              onPressed: () => _logout(),
+              child: const Text("Cerrar sesión"),
+            ),
+          ],
+        ),
       ),
     );
+  }
+
+  void _logout() async {
+    await FirebaseAuth.instance.signOut();
   }
 }

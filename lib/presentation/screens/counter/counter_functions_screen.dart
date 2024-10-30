@@ -59,7 +59,7 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
                 });
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             CustonButton(
